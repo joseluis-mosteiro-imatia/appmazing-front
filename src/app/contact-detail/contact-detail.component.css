@@ -1,0 +1,11 @@
+.card {
+  margin: 20px 40px 0 40px;
+}
+
+.card-content p{
+  display: flex;
+  align-items: center;
+}
+.card-content p mat-icon, .card-content p strong{
+  margin: 5px;
+}

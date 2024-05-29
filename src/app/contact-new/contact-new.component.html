@@ -1,0 +1,42 @@
+<mat-card class="card">
+  <mat-card-title>Edita el Contacto</mat-card-title>
+  <mat-card-content class="card-content">
+   <form (submit)="newContact()">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput type="text" name="name" [(ngModel)]="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Apellido 1</mat-label>
+      <input matInput type="text" name="surname" [(ngModel)]="surname">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Segundo apellido</mat-label>
+      <input matInput type="text" name="lastname" [(ngModel)]="lastname">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Telefono</mat-label>
+      <input matInput type="text" name="telephone" [(ngModel)]="telephone">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="text" name="email" [(ngModel)]="email">
+    </mat-form-field>
+
+    <div class="buttons">
+      <button mat-raised-button color="primary" type="submit">
+        <mat-icon>save</mat-icon>
+      </button>
+      <button mat-raised-button type="button" (click)="cancelInsert()">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </div>
+
+   </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,8 @@
+.buttons{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttons button{
+  margin-left: 8px;
+}

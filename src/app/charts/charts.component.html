@@ -1,0 +1,76 @@
+
+<mat-card class="card">
+  <mat-card-title>Graficas!</mat-card-title>
+  <mat-card-content>
+    <div class="chart-row">
+      <div>
+        <p><Strong>Iniciales Apellido</Strong></p>
+        <ngx-charts-bar-vertical [view]="[400, 300]" [results]="initialLetter" [xAxis]="true" [yAxis]="true"
+        [legend]="false" [showXAxisLabel]="true" xAxisLabel="Initial of surname"
+        yAxisLabel = "Number Of Contacts" >
+
+        </ngx-charts-bar-vertical>
+      </div>
+      <div>
+        <p><strong>Largo del Nombre</strong></p>
+        <ngx-charts-line-chart [view]="[400, 300]" [results]="contactsByFullName"
+        [xAxis]="true" [yAxis]="true"
+        [legend]="false" [showXAxisLabel]="true" xAxisLabel="Largo Nombre completo"
+        yAxisLabel = "Numero de contactos" >
+        </ngx-charts-line-chart>
+      </div>
+    </div>
+    <div class="chart-row">
+      <div>
+        <p><Strong>Extension</Strong></p>
+        <ngx-charts-pie-chart [view]="[400, 300]" [results]="emailExtensions"
+        [labels]="true" [doughnut]="true"></ngx-charts-pie-chart>
+      </div>
+      <div>
+        <p><strong>Prefijo</strong></p>
+        <ngx-charts-bar-horizontal [view]="[400, 300]" [results]="phonePrefixData"
+         [xAxis]="true" [yAxis]="true"
+        [showXAxisLabel]="true" [showYAxisLabel]="true" xAxisLabel="numero Contactos"
+        yAxisLabel = "Prefijo telefono" >
+        </ngx-charts-bar-horizontal>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+
+<mat-card class="card">
+  <mat-card-title>Graficas!</mat-card-title>
+  <mat-card-content>
+    <div class="chart-row">
+      <div>
+        <!--primera-->
+
+        <p><Strong>Iniciales Apellido</Strong></p>
+        <ngx-charts-bar-vertical [view]="[400, 300]" [results]="unaProduc" [xAxis]="true" [yAxis]="true"
+        [legend]="false" [showXAxisLabel]="true" xAxisLabel="producto"
+        yAxisLabel = "stock" >
+
+        </ngx-charts-bar-vertical>
+      </div>
+      <div>
+        <!--segunda-->
+
+        <p><strong>Largo del Nombre</strong></p>
+        <ngx-charts-line-chart [view]="[400, 300]" [results]="dosProducts"
+        [xAxis]="true" [yAxis]="true"
+        [legend]="false" [showXAxisLabel]="true" xAxisLabel="Largo Nombre completo"
+        yAxisLabel = "Numero de contactos" >
+        </ngx-charts-line-chart>
+      </div>
+    </div>
+    <div class="chart-row">
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

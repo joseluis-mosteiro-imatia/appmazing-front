@@ -1,0 +1,31 @@
+<mat-card class="card">
+  <mat-card-title>Detalle de Contacto</mat-card-title>
+  <mat-card-content class="card-content">
+    <p>
+      <mat-icon>person</mat-icon> <strong>Nombre : </strong>{{ product.name }}
+    </p>
+    <p>
+      <mat-icon>sell</mat-icon> <strong>Stock  : </strong>{{ product.stock }}
+    </p>
+    <p>
+      <mat-icon>euro</mat-icon> <strong>Precio : </strong>{{ product.price }}€
+    </p>
+    <p>
+      <mat-icon>phone</mat-icon> <strong>Activo : </strong>{{ product.active? "Activado": "Desactivado" }}
+    </p>
+    <p>
+      <mat-icon>barcode_reader</mat-icon> <strong>Fecha : </strong>{{ product.date_added | date : 'dd/MM/yyyy' }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button type="button" (click)="editContact()">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-raised-button type="button" (click)="closeContact()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <button mat-raised-button type="button" color="warn" (click)="openDeleteDialog(product.id)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

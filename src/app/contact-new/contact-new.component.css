@@ -1,0 +1,16 @@
+.card{
+  margin: 20px 40px 0 40px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons{
+  display: flex;
+  justify-content: flex-end;
+}
+.buttons button{
+  margin: 8px;
+}

@@ -1,0 +1,46 @@
+<mat-card class="card">
+  <mat-card-title>Edita el Contacto</mat-card-title>
+  <mat-card-content class="card-content">
+   <form (submit)="updateContact()">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput type="text" name="name" [(ngModel)]="contact.name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>stock</mat-label>
+      <input matInput type="text" name="stock" [(ngModel)]="contact.stock">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>price</mat-label>
+      <input matInput type="text" name="price" [(ngModel)]="contact.price">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>active</mat-label>
+      <input matInput type="string" name="active" [(ngModel)]="contact.active">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Fecha</mat-label>
+      <input matInput [matDatepicker]="peep" name="date_added" [(ngModel)]="contact.date_added">
+      <mat-datepicker-toggle matIconSuffix [for]="peep"></mat-datepicker-toggle>
+      <mat-datepicker #peep>
+      </mat-datepicker>
+    </mat-form-field>
+
+
+    <div class="buttons">
+      <button mat-raised-button color="primary" type="submit">
+        <mat-icon>save</mat-icon>
+      </button>
+      <button mat-raised-button type="button" (click)="cancelChange()">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </div>
+
+   </form>
+  </mat-card-content>
+</mat-card>
